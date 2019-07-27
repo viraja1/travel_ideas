@@ -1,0 +1,23 @@
+{% if flights %}
+    {% for flight in flights %}
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ flight.origin }} -> {{ flight.destination }}</h5>
+                <p class="card-text">
+                    Departure Date: {{ flight.departureDate }}
+                </p>
+                <p class="card-text">
+                    Return Date: {{ flight.returnDate }}
+                </p>
+                <p class="card-text">
+                    Price: {{ flight.price.total }}
+                </p>
+            </div>
+        </div>
+        <br/>
+    {% endfor %}
+{% else %}
+    <div>
+        <p>No Flights Found</p>
+    </div>
+{% endif %}

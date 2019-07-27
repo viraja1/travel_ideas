@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %}
+
+
+    <div>
+        <p class="h3">Find travel ideas from your city</p>
+        <input type="search" id="search" value="" class="form-control" placeholder="Enter your city name">
+        <button type="button" class="btn btn-primary" id="btn-search">Search</button>
+        <div class="loader" style="display:none;"></div>
+        <br/>
+        <br/>
+        <div id="result">
+
+        </div>
+        <br/>
+    </div>
+
+{% endblock %}
